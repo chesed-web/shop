@@ -17,6 +17,7 @@ const firebaseConfig = {
     appId: "1:631081373301:web:7e88fd4d2f37ac6de7b23c"
 };
 
+
 let carrito = JSON.parse(localStorage.getItem("carrito")) || {};
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
