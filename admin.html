@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Chesed Admin</title>
+
+    <link rel="stylesheet" href="admin.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>💎 CHESED ADMIN</h1>
+
+    <div class="acciones-superiores">
+
+        <button
+            id="guardar-todo"
+            onclick="guardarTodo()">
+
+            💾 Guardar cambios
+
+        </button>
+
+        <button
+            onclick="toggleNuevoProducto()">
+
+            ➕ Nuevo producto
+
+        </button>
+
+    </div>
+
+</header>
+
+<section
+    id="nuevo-producto"
+    style="display:none;">
+
+    <h2>Nuevo producto</h2>
+
+    <input
+        type="text"
+        id="nuevo-nombre"
+        placeholder="Nombre">
+
+    <textarea
+        id="nuevo-descripcion"
+        placeholder="Descripción"></textarea>
+
+    <input
+        type="number"
+        id="nuevo-precio"
+        placeholder="Precio">
+
+    <input
+        type="number"
+        id="nuevo-stock"
+        placeholder="Stock">
+
+    <input
+        type="text"
+        id="nuevo-categoria"
+        placeholder="Categoría">
+
+    <h3>Imágenes</h3>
+
+    <input
+        type="file"
+        id="nuevo-imagen"
+        accept="image/*">
+
+    <button
+        onclick="subirImagenCloudinary()">
+
+        ☁️ Subir imagen
+
+    </button>
+
+    <hr>
+
+    <input
+        type="text"
+        id="nueva-url"
+        placeholder="Pegar URL de una imagen">
+
+    <button
+        onclick="agregarUrlImagen()">
+
+        🔗 Agregar URL
+
+    </button>
+
+    <div id="lista-imagenes"></div>
+
+    <button
+        class="crear-producto"
+        onclick="crearProducto()">
+
+        Crear producto
+
+    </button>
+
+</section>
+
+<section class="herramientas">
+
+    <input
+        type="text"
+        id="buscador"
+        placeholder="🔍 Buscar producto...">
+
+    <div id="filtros-admin"></div>
+
+</section>
+
+<section id="productos"></section>
+
+<script
+    type="module"
+    src="admin.js">
+</script>
+
+</body>
+
+</html>

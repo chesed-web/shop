@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Chesed</h1>
+<p class="subtitulo">Sublimaciones</p>
+
+<div
+    id="carrito"
+    onclick="toggleCarrito()">
+    🛒 (<span id="cantidad-carrito">0</span>)
+</div>
+
+
+<div id="overlay-carrito"></div>
+<div
+    id="detalle-carrito"
+    style="display:none;">
+<div class="sheet-bar"></div>
+    <h2>Tu pedido</h2>
+
+    <ul id="lista-carrito"></ul>
+
+    <h3>
+        Total: $<span id="total">0</span>
+    </h3>
+
+    <button id="btn-whatsapp" onclick="enviarWhatsApp()">
+    Pedir por WhatsApp
+    </button>
+    
+    <input
+    type="text"
+    id="nombre"
+    placeholder="Tu nombre">
+
+    <input
+    type="text"
+    id="direccion"
+    placeholder="Dirección de entrega">
+
+    <textarea
+    id="observaciones"
+    placeholder="Observaciones (opcional)"></textarea>
+
+    <button id="btn-ubicacion" onclick="obtenerUbicacion()">
+    📍 Compartir ubicación
+    </button>
+
+    <input
+    type="hidden"
+    id="ubicacion">
+
+    <button id="btn-vaciar" onclick="vaciarCarrito()">
+    🗑 Vaciar carrito
+    </button>
+
+    </div>
+</div>
+
+<div id="filtros"></div>
+
+    <input
+    type="text"
+    id="buscador"
+    placeholder="🔍 Buscar productos..."
+    onkeyup="buscarProductos()">
+
+    <div id="productos"></div>
+
+    <script type="module" src="app.js"></script>
+
+</body>
+</html>
